@@ -1,0 +1,53 @@
+About
+
+Welcome to L2 Feronia. We are a small group of friends who used to play Lineage 2 in its golden era. 
+During the quarantine, nostalgia hit us hard and we came up with the idea of our own private L2 server. 
+The last month we try our best in order to develop and maintain a stable Server without bugs, unbalance classes and stable economy but we can't achieve that without a player base.
+As a result, we invite you to join us in l2 Feronia open beta. After the beta test all the characters will be deleted but the accounts which joined during the beta will turn into premium accounts for 1 month.
+
+Custom Features
+
+Flag PvP Zones and custom Areas
+Commands for teleport ex .giran
+Command for Bank system ex .withdraw .deposit
+Vote System rewards
+PvP Count Rewards
+Achievement System Rewards
+Nobless Manager
+20 Types of Custom Events with our test event engine.
+
+Server Info
+
+Rate Xp x100
+Rate Sp x100
+Rate Adena x100
+RatePartyXp  x200
+RatePartySp  x200
+RateConsumableCost x1
+RateDropItems  x1
+RateRaidDropItems = x1
+
+Enchantments
+
+Normal 70% 
+Blessed 80%
+Vote Scroll 90%
+Safe Scroll 100%
+Safe +4 Max +20
+Attributes Enchant rate 80%
+
+Main Currency
+
+Adena
+Festival Adena
+Donation Coins
+
+Top Armor and Weapons
+
+Elegia and Vorpal
+Top s 84 Weapons
+
+Jewls
+
+Rb Jewls (can only be obtained from raidbosses and donations)
+Top s84 Jewls

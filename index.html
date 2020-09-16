@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>L2 Feronia</title>
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>L2 Feronia</title>
+</head>
+
+<body>
+  <main>
     <section id="banner">
-      <nav class="navbar">
+      <!-- <nav class="navbar">
         <ul>
           <li>
             <a class="nav-link" href="/">Home</a>
@@ -38,29 +34,28 @@
             <a class="nav-link" href="#">Discord</a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
       <div class="header-container">
         <h1>Lineage II: Feronia</h1>
         <div class="header-buttons">
           <div class="button-container">
-            <button type="button" class="primary-button">
+            <a href="http://www.mediafire.com/file/zp6cubhtt870l5i/file" type="button" class="primary-button">
               Download Client
-            </button>
+            </a>
             <div class="button-accent"></div>
-            <p>Download the client of the current server.</p>
+            <p>Download the Lineage II High 5 client.</p>
           </div>
           <div class="button-container">
-            <button type="button" class="primary-button">
+            <a href="http://www.mediafire.com/file/gq2s60kd18lfxib/file" type="button" class="primary-button">
               Download System
-            </button>
+            </a>
             <div class="button-accent"></div>
-            <p>Download the system file of the game.</p>
+            <p>Download our system file.</p>
           </div>
         </div>
       </div>
       <a href="#overview" type="button" class="scroll-button"></a>
     </section>
-
     <section id="overview">
       <div class="container">
         <div class="text">
@@ -72,22 +67,24 @@
             own private L2 server.
           </p>
           <p>
-            For this past month we have been trying our best to develop and
-            maintain a stable server free of bugs, unbalanced classes and stable
-            economy, but we can't achieve that without a solid player base. As a
+            For the past month we have been doing our best to develop and
+            maintain a stable server free of bugs, unbalanced classes and with a stable
+            economy. Having said that, we need to put our efforts to the test with a solid player base. As a
             result, we are inviting you to join L2 Feronia's open beta stage.
           </p>
           <p>
-            Please note that after the beta test is over all characters will be
-            deleted, but the players' accounts that were created during this
+            Please note that, although after the beta test is over all characters will be
+            deleted, all players' accounts that were created during this
             phase will automatically be turned into premium accounts for one
             month.
+          </p>
+          <p>
+            We'll be more than happy to have you with us during this phase and we hope you enjoy playing in our server!
           </p>
         </div>
         <img src="images/l2_crop.jpg" alt="lineage 2 wallpaper" />
       </div>
     </section>
-
     <section id="server">
       <div class="container">
         <img src="images/l2_03_crop.jpg" alt="lineage 2 wallpaper" />
@@ -103,10 +100,9 @@
         </div>
       </div>
     </section>
-
-    <section id="server-info">
+    <section id="server-details">
       <div class="table-container">
-        <h1 class="table-heading">Server Info</h1>
+        <h1 class="text-heading">Server Info</h1>
         <table>
           <tr>
             <td>Rate Xp</td>
@@ -143,7 +139,7 @@
         </table>
       </div>
       <div class="table-container">
-        <h1 class="table-heading">Enchantments</h1>
+        <h1 class="text-heading">Enchantments</h1>
         <table>
           <tr>
             <td>Normal</td>
@@ -171,45 +167,43 @@
           </tr>
         </table>
       </div>
-      <div class="table-container">
-        <h1 class="table-heading">Main Currency</h1>
-        <table>
-          <tr>
-            <td>Rate Xp</td>
-            <td>x100</td>
-          </tr>
-          <tr>
-            <td>Rate Sp</td>
-            <td>x100</td>
-          </tr>
-          <tr>
-            <td>Rate Adena</td>
-            <td>x100</td>
-          </tr>
-          <tr>
-            <td>Rate Party Xp</td>
-            <td>x200</td>
-          </tr>
-          <tr>
-            <td>Rate Party Sp</td>
-            <td>x200</td>
-          </tr>
-          <tr>
-            <td>Rate Consumable Cost</td>
-            <td>x1</td>
-          </tr>
-          <tr>
-            <td>Rate Drop Items</td>
-            <td>x1</td>
-          </tr>
-          <tr>
-            <td>Rate Raid Drop Items</td>
-            <td>x1</td>
-          </tr>
-        </table>
+      <div class="small-section">
+        <div class="text">
+          <h1 class="text-heading">Main Currency</h1>
+          <p>Adena</p>
+          <p>Festival Adena</p>
+          <p>Donation Coins</p>
+        </div>
+        <div class="text">
+          <h1 class="text-heading">Top Armor & Weapons</h1>
+          <p>Elegia & Vorpal</p>
+          <p>Top s 84 Weapons</p>
+        </div>
+        <div class="text">
+          <h1 class="text-heading">Jewels</h1>
+          <p>Rb Jewels (obtained from raidbosses and donations)</p>
+          <p>Top s 84 jewels</p>
+        </div>
       </div>
     </section>
+    <section id="discord">
+      <div class="container">
+        <div class="text">
+          <h1 class="text-heading">Join Us On Discord</h1>
+          <p>We are building a gaming community and that could not happen without the proverbial discord server.</p>
+          <p>Join the server using the widget on the right and feel free to drop by and say hi!</p>
+        </div>
+        <iframe src="https://discordapp.com/widget?id=748247706690125895&theme=dark" width="350" height="500"
+          allowtransparency="true" frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; L2 Feronia</p>
+    <p>Page created by <a href="https://www.instagram.com/filelink.shrine/">Evan Kapantais</a></p>
+  </footer>
+  <script src="main.js"></script>
+</body>
 
-    <script src="main.js"></script>
-  </body>
 </html>
