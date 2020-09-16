@@ -351,6 +351,9 @@ body > footer {
   justify-content: space-between;
   align-items: center;
 }
+body > footer img {
+  width: 1.5rem;
+}
 body > footer a {
   color: #edd28c;
 }

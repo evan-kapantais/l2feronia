@@ -385,6 +385,10 @@ body > footer {
   justify-content: space-between;
   align-items: center;
 
+  img {
+    width: 1.5rem;
+  }
+
   a {
     color: $cta-gold;
   }
