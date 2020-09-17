@@ -91,6 +91,11 @@ a:hover {
   text-transform: uppercase;
   font-family: "Merienda", cursive;
   font-weight: 400;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #edd28c;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.518);
+  letter-spacing: 5px;
+  color: rgba(0, 0, 0, 0.435);
 }
 @media only screen and (max-width: 494px) {
   .header-container h1 {
@@ -117,14 +122,13 @@ button {
   text-decoration: none;
   display: block;
   text-align: center;
-  background: white;
-  background: rgba(0, 0, 0, 0.35);
+  background: #111;
   color: #edd28c;
   font-size: 1rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-weight: 700;
-  border: 5px double #edd28c;
+  border: 1px solid #edd28c;
   overflow: hidden;
   transition: all 300ms ease-in-out;
 }
@@ -134,7 +138,8 @@ button {
   }
 }
 .button-container .primary-button:hover {
-  background: black;
+  background: #edd28c;
+  color: #333;
 }
 .button-container .primary-button:hover ~ p {
   animation: help-text 1s 1.5s ease forwards;
@@ -200,27 +205,13 @@ button {
   padding: 10rem 2rem;
 }
 
-#overview:after,
-#server:after {
-  content: "";
+canvas {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: -6px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  border: 2px solid rgba(120, 139, 157, 0.141);
-  width: 16px;
-  height: 16px;
-}
-#overview:before,
-#server:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  background: #788b9d;
-  width: 8px;
-  height: 8px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 #overview > .container > .text {
@@ -255,6 +246,7 @@ button {
   width: calc(25vw + 50px);
   height: 100%;
   box-shadow: 0 0 20px lightgrey;
+  z-index: 999;
 }
 @media only screen and (max-width: 960px) {
   .container img {
@@ -273,6 +265,7 @@ button {
 .text-heading {
   font-family: "Merienda", cursive;
   margin-bottom: 2rem;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.257);
 }
 
 #server-details {
@@ -341,11 +334,26 @@ button {
   }
 }
 
+.deco {
+  height: 50vh;
+}
+.deco-01 {
+  background: url("images/l2_04.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.deco-02 {
+  background: url("images/l2_05.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+.deco-03 {
+  background: url("images/l2_01.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+
 body > footer {
   padding: 2rem;
   font-size: 0.8rem;
-  background: #111;
-  color: white;
+  background: white;
   font-family: "Merienda", cursive;
   display: flex;
   justify-content: space-between;
