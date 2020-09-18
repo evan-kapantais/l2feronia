@@ -1,0 +1,92 @@
+@import 'styles.scss';
+
+nav {
+  position: absolute;
+  top: 0;
+  padding: 2rem;
+  z-index: 999;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#vote-banner {
+  height: 100vh;
+  @extend %center-items;
+  font-family: 'Merienda', cursive;
+  font-size: 2rem;
+  background: url('images/l2_06.jpg') no-repeat center / cover;
+}
+
+.container {
+  margin-top: 18rem;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 6rem;
+    color: white;
+    font-size: 6rem;
+  }
+}
+
+.vote-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.vote-card {
+  text-decoration: none;
+  color: #fff;
+  @extend %center-items;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.155);
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
+  filter: grayscale(0.7);
+  z-index: 10;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    filter: grayscale(0);
+
+    img {
+      transform: scale(1.03);
+    }
+
+    .card-text {
+      opacity: 1;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 300ms ease-in-out;
+  }
+}
+
+.card-text {
+  opacity: 0.7;
+  transition: all 300ms ease-in-out;
+
+  p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0;
+  }
+}
