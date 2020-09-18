@@ -356,6 +356,14 @@ body>footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @media only screen and (max-width: 1000px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 670px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .vote-card {
@@ -370,6 +378,10 @@ body>footer {
     z-index: 10;
     border: 5px solid $cta-gold;
     transition: all 200ms ease-out;
+
+    @media only screen and (max-width: 670px) {
+      width: 80vw;
+    }
 
     &:hover {
       filter: grayscale(0);

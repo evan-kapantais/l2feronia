@@ -385,6 +385,16 @@ body > footer a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
+@media only screen and (max-width: 1000px) {
+  #vote-banner .vote-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 670px) {
+  #vote-banner .vote-cards {
+    grid-template-columns: 1fr;
+  }
+}
 #vote-banner .vote-card {
   text-decoration: none;
   color: #fff;
@@ -396,6 +406,11 @@ body > footer a {
   z-index: 10;
   border: 5px solid #edd28c;
   transition: all 200ms ease-out;
+}
+@media only screen and (max-width: 670px) {
+  #vote-banner .vote-card {
+    width: 80vw;
+  }
 }
 #vote-banner .vote-card:hover {
   filter: grayscale(0);
