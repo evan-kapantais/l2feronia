@@ -193,7 +193,7 @@ button {
   display: flex;
   align-items: center;
 
-  img {
+  .side-image {
     width: calc(25vw + 50px);
     height: 100%;
     box-shadow: 0 0 20px lightgrey;
@@ -294,7 +294,7 @@ button {
   height: 50vh;
 
   &-01 {
-    background: url('images/l2_04.jpg') no-repeat center / cover;
+    background: url('images/l2_04.jpg') center / cover;
     background-attachment: fixed;
     @extend %center-items;
 
@@ -333,7 +333,7 @@ body>footer {
 // Vote banner
 
 #vote-banner {
-  padding: 10rem 0;
+  padding: 10rem 2rem;
   @extend %center-items;
   font-family: 'Merienda', cursive;
   font-size: 2rem;
@@ -349,6 +349,10 @@ body>footer {
       color: $cta-gold;
       font-size: 6rem;
       user-select: none;
+
+      @media only screen and (max-width: 670px) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -380,7 +384,7 @@ body>footer {
     transition: all 200ms ease-out;
 
     @media only screen and (max-width: 670px) {
-      width: 80vw;
+      margin: 0 auto;
     }
 
     &:hover {
