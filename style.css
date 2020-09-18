@@ -1,4 +1,4 @@
-.deco-01, #overview,
+#vote-banner .vote-card, #vote-banner, .deco-01, #overview,
 #server,
 #discord, .header-buttons {
   display: flex;
@@ -49,9 +49,19 @@ li {
   display: inline-block;
 }
 
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 #banner {
   height: 100vh;
   background: #19345c url("images/l2_06.jpg") no-repeat center/cover;
+  box-shadow: inset 0 -300px 300px black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,15 +211,6 @@ button {
   padding: 10rem 2rem;
 }
 
-canvas {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
 #overview > .container > .text {
   margin-right: 8rem;
 }
@@ -242,7 +243,7 @@ canvas {
   width: calc(25vw + 50px);
   height: 100%;
   box-shadow: 0 0 20px lightgrey;
-  z-index: 999;
+  z-index: 990;
 }
 @media only screen and (max-width: 960px) {
   .container img {
@@ -407,6 +408,72 @@ body > footer a {
 }
 .full-width-link:hover:after {
   left: 35%;
+}
+
+#vote-banner {
+  padding: 10rem 0;
+  font-family: "Merienda", cursive;
+  font-size: 2rem;
+  background: url("images/l2_07.jpg") no-repeat center/cover;
+  box-shadow: inset 0 300px 300px black;
+}
+#vote-banner .container {
+  display: block;
+  text-align: center;
+}
+#vote-banner .container h1 {
+  margin-bottom: 6rem;
+  color: #edd28c;
+  font-size: 6rem;
+  user-select: none;
+}
+#vote-banner .vote-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#vote-banner .vote-card {
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.155);
+  width: 300px;
+  height: 180px;
+  overflow: hidden;
+  filter: grayscale(0.7);
+  z-index: 10;
+  border: 5px solid #edd28c;
+  transition: all 200ms ease-out;
+}
+#vote-banner .vote-card:hover {
+  filter: grayscale(0);
+}
+#vote-banner .vote-card:hover img {
+  transform: scale(1.03);
+}
+#vote-banner .vote-card:hover .card-text {
+  opacity: 1;
+}
+#vote-banner .vote-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms ease-in-out;
+}
+#vote-banner .card-text {
+  opacity: 0.7;
+  transition: all 300ms ease-in-out;
+  z-index: 999;
+}
+#vote-banner .card-text p {
+  font-size: 1rem;
+  text-align: left;
+}
+#vote-banner .card-text h1 {
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

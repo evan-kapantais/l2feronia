@@ -1,4 +1,4 @@
-.vote-card, #vote-banner {
+#vote-banner .vote-card, #vote-banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,24 +76,22 @@ nav a:hover {
   font-size: 2rem;
   background: url("images/l2_06.jpg") no-repeat center/cover;
 }
-
-.container {
+#vote-banner .container {
   margin-top: 18rem;
   text-align: center;
 }
-.container h1 {
+#vote-banner .container h1 {
   margin-bottom: 6rem;
   color: white;
   font-size: 6rem;
+  user-select: none;
 }
-
-.vote-cards {
+#vote-banner .vote-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
-
-.vote-card {
+#vote-banner .vote-card {
   text-decoration: none;
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.155);
@@ -104,16 +102,16 @@ nav a:hover {
   z-index: 10;
   transition: all 300ms ease-in-out;
 }
-.vote-card:hover {
+#vote-banner .vote-card:hover {
   filter: grayscale(0);
 }
-.vote-card:hover img {
+#vote-banner .vote-card:hover img {
   transform: scale(1.03);
 }
-.vote-card:hover .card-text {
+#vote-banner .vote-card:hover .card-text {
   opacity: 1;
 }
-.vote-card img {
+#vote-banner .vote-card img {
   position: absolute;
   top: 0;
   left: 0;
@@ -121,16 +119,15 @@ nav a:hover {
   height: 100%;
   transition: transform 300ms ease-in-out;
 }
-
-.card-text {
+#vote-banner .card-text {
   opacity: 0.7;
   transition: all 300ms ease-in-out;
 }
-.card-text p {
+#vote-banner .card-text p {
   font-size: 1rem;
   text-align: left;
 }
-.card-text h1 {
+#vote-banner .card-text h1 {
   font-size: 3rem;
   line-height: 1;
   margin: 0;
