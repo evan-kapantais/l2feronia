@@ -330,62 +330,6 @@ body>footer {
   }
 }
 
-.full-width-link {
-  font-family: 'Merienda', cursive;
-  text-decoration: none;
-  width: 100%;
-  text-align: center;
-  color: inherit;
-  color: rgba(255, 255, 255, 0.428);
-  font-size: 6rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: 3px;
-  transition: all 500ms ease;
-
-  &:hover {
-    text-decoration: none;
-    color: $cta-gold;
-    letter-spacing: 12px;
-    -webkit-text-stroke-color: $cta-gold;
-    -webkit-text-stroke-width: 3px;
-  }
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 3px;
-    background: $cta-gold;
-    transition: all 500ms ease;
-  }
-
-  &:before {
-    top: -2rem;
-    right: 32%;
-  }
-
-  &:after {
-    bottom: -2rem;
-    left: 32%;
-  }
-
-  &:hover:before,
-  &:hover:after {
-    width: 20%;
-  }
-
-  &:hover:before {
-    right: 35%;
-  }
-
-  &:hover:after {
-    left: 35%;
-  }
-}
-
 // Vote banner
 
 #vote-banner {

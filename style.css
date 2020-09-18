@@ -363,53 +363,6 @@ body > footer a {
   color: #edd28c;
 }
 
-.full-width-link {
-  font-family: "Merienda", cursive;
-  text-decoration: none;
-  width: 100%;
-  text-align: center;
-  color: inherit;
-  color: rgba(255, 255, 255, 0.428);
-  font-size: 6rem;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  -webkit-text-stroke-color: transparent;
-  -webkit-text-stroke-width: 3px;
-  transition: all 500ms ease;
-}
-.full-width-link:hover {
-  text-decoration: none;
-  color: #edd28c;
-  letter-spacing: 12px;
-  -webkit-text-stroke-color: #edd28c;
-  -webkit-text-stroke-width: 3px;
-}
-.full-width-link:before, .full-width-link:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background: #edd28c;
-  transition: all 500ms ease;
-}
-.full-width-link:before {
-  top: -2rem;
-  right: 32%;
-}
-.full-width-link:after {
-  bottom: -2rem;
-  left: 32%;
-}
-.full-width-link:hover:before, .full-width-link:hover:after {
-  width: 20%;
-}
-.full-width-link:hover:before {
-  right: 35%;
-}
-.full-width-link:hover:after {
-  left: 35%;
-}
-
 #vote-banner {
   padding: 10rem 0;
   font-family: "Merienda", cursive;
