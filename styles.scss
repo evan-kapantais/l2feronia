@@ -11,7 +11,7 @@ $status-dot-size: 15px;
 
 // Timings
 
-// --Banner heading 
+// --Banner heading
 $banner-heading-fade-delay: 500ms;
 $banner-heading-fade-duration: 2s;
 $banner-heading-transform-duration: 2s;
@@ -105,7 +105,6 @@ body {
   overflow-x: hidden;
 }
 
-
 ul {
   list-style: none;
 }
@@ -125,4 +124,5 @@ canvas {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
