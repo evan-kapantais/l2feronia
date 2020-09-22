@@ -1,9 +1,43 @@
+// Colors
+
 $primary-text-color: #333;
 $navy-blue: #19345c;
 $cta-gold: rgb(237, 210, 140);
 $discord-purple: #2a2841;
 
+// Sizes
+
 $status-dot-size: 15px;
+
+// Timings
+
+// --Banner heading 
+$banner-heading-fade-delay: 500ms;
+$banner-heading-fade-duration: 2s;
+$banner-heading-transform-duration: 2s;
+$banner-heading-transform-delay: 3s;
+$banner-heading-shadow-duration: 3s;
+$banner-heading-shadow-delay: 4s;
+
+// --Banner shadow
+$banner-shadow-delay: 1s;
+$banner-shadow-duration: 3s;
+
+// --Banner buttons
+$banner-buttons-fade-delay: 3s;
+$banner-buttons-fade-duration: 1.5s;
+
+// --Scroll Button
+$scroll-button-fade-duration: 1s;
+$scrol-button-fade-delay: 3.5s;
+
+// --Banner navigation
+$banner-navbar-fade-delay: 4s;
+$banner-navbar-fade-duration: 2s;
+
+@mixin box-shadow($vertical) {
+  box-shadow: inset 0 $vertical 300px black;
+}
 
 %center-items {
   display: flex;
@@ -44,6 +78,26 @@ $status-dot-size: 15px;
   box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $cta-gold;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(222, 186, 95);
+}
+
 html,
 body {
   font-family: 'Open Sans', sans-serif;
@@ -67,4 +121,8 @@ canvas {
   top: 0;
   left: 0;
   pointer-events: none;
+}
+
+a {
+  text-decoration: none;
 }
