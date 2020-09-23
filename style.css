@@ -1,4 +1,4 @@
-.deco-01, #overview,
+#overview,
 #server,
 #discord, #vote-banner .vote-card, #vote-banner, .header-buttons {
   display: flex;
@@ -467,19 +467,9 @@ button {
 }
 
 .deco {
-  height: 20vh;
-}
-.deco-01 {
-  background: url("images/l2_04.jpg") center/cover;
-  background-attachment: fixed;
-}
-.deco-02 {
-  background: url("images/l2_05.jpg") no-repeat center/cover;
-  background-attachment: fixed;
-}
-.deco-03 {
-  background: url("images/l2_01.jpg") no-repeat center/cover;
-  background-attachment: fixed;
+  height: 10vh;
+  background: #111 url("images/l2_06.jpg") no-repeat 50% 100%/cover;
+  box-shadow: inset 0 -50px 20px rgba(0, 0, 0, 0.73);
 }
 
 body > footer {
