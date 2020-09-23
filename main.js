@@ -3,7 +3,6 @@ window.addEventListener('load', () => {
 
   particlesJS.load('deco-01', 'particles-banner.json');
   particlesJS.load('deco-02', 'particles-banner.json');
-  particlesJS.load('deco-03', 'particles-banner.json');
 
   particlesJS.load('overview', 'particles.json');
   particlesJS.load('server', 'particles.json');
