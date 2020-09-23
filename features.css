@@ -1,0 +1,162 @@
+@keyframes scroll-button {
+  from {
+    transform: rotate(45deg) translateX(-50%);
+  }
+  to {
+    transform: rotate(45deg) translateX(-50%);
+  }
+  50% {
+    transform: rotate(45deg) translateX(-25%) translateY(5px);
+  }
+}
+@keyframes help-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #edd28c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #deba5f;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  height: 100vh;
+  background: #111 url("images/l2_04.jpg") no-repeat center/cover;
+  color: #d2d2d2;
+}
+
+.top-navbar {
+  color: #edd28c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: #111;
+}
+.top-navbar > div > a {
+  display: inline-block;
+  margin: 0 0.3rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 5px;
+  opacity: 0;
+  background: #edd28c;
+  transform: rotate(45deg);
+  transition: all 200ms ease-in-out;
+}
+.nav-link:hover:after {
+  opacity: 1;
+}
+
+.active-link {
+  transform: translateY(3rem) scale(1.5);
+}
+.active-link:after {
+  opacity: 1;
+}
+
+#features {
+  margin-top: 10rem;
+}
+#features .container {
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-card {
+  width: fit-content;
+  background: #d2d2d2;
+  color: #111;
+  padding: 2rem;
+  border-radius: 2px;
+}
+.features-card h2 {
+  margin-bottom: 2rem;
+}
+.features-card p {
+  margin-bottom: 1.5rem;
+  margin-left: 0.8rem;
+}
+.features-card p:last-of-type {
+  margin-bottom: 0;
+}
+.features-card p:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -0.8rem;
+  width: 4px;
+  height: 4px;
+  border: 1px solid #111;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=features.css.map */

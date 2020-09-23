@@ -5,8 +5,7 @@
   color: $cta-gold;
   text-align: center;
   opacity: 0;
-  transition: opacity $banner-navbar-fade-duration $banner-navbar-fade-delay
-    ease-in-out;
+  transition: opacity $banner-navbar-fade-duration $banner-navbar-fade-delay ease-in-out;
 
   a {
     display: inline-block;
@@ -42,8 +41,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
-  transition: box-shadow $banner-shadow-duration $banner-shadow-delay
-    ease-in-out;
+  transition: box-shadow $banner-shadow-duration $banner-shadow-delay ease-in-out;
 }
 
 .header-container {
@@ -64,10 +62,8 @@
     opacity: 0;
     transform: translateY(80px);
     transition: opacity $banner-heading-fade-duration ease-in-out,
-      transform $banner-heading-transform-duration
-        $banner-heading-transform-duration ease-in-out,
-      text-shadow $banner-heading-shadow-duration $banner-heading-shadow-delay
-        ease-in-out;
+      transform $banner-heading-transform-duration $banner-heading-transform-duration ease-in-out,
+      text-shadow $banner-heading-shadow-duration $banner-heading-shadow-delay ease-in-out;
 
     @media only screen and (max-width: 494px) {
       font-size: 8vw;
@@ -117,11 +113,11 @@ button {
     color: #333;
   }
 
-  &:hover ~ p {
+  &:hover~p {
     animation: help-text 1s 1.5s ease forwards;
   }
 
-  &:hover + .button-accent {
+  &:hover+.button-accent {
     opacity: 1;
     transform: rotate(45deg);
   }
@@ -280,8 +276,7 @@ button {
 }
 
 #overview {
-  background: #000 url('images/l2_04_flip.jpg') no-repeat center / cover;
-  background: #fff;
+  background-color: rgb(246, 246, 246);
 }
 
 #overview,
@@ -297,7 +292,7 @@ button {
   @extend %center-items;
 }
 
-#overview > .container > .text {
+#overview>.container>.text {
   margin-right: 8rem;
 
   @media only screen and (max-width: 960px) {
@@ -305,7 +300,7 @@ button {
   }
 }
 
-#server > .container > .text {
+#server>.container>.text {
   margin-left: 8rem;
 
   @media only screen and (max-width: 960px) {
@@ -313,7 +308,7 @@ button {
   }
 }
 
-#discord > .container > .text {
+#discord>.container>.text {
   color: white;
   margin-right: 8rem;
 }
@@ -362,7 +357,7 @@ button {
     align-items: center;
   }
 
-  > div {
+  >div {
     margin: 0 4rem;
   }
 
@@ -421,7 +416,7 @@ button {
 }
 
 .deco {
-  height: 50vh;
+  height: 20vh;
 
   &-01 {
     background: url('images/l2_04.jpg') center / cover;
@@ -440,12 +435,13 @@ button {
   }
 }
 
-body > footer {
+body>footer {
   padding: 4rem 2rem;
   background: #111;
   color: rgb(190, 190, 190);
   line-height: 2;
   font-size: 0.9rem;
+  border-top: 2px solid rgb(215, 215, 215);
 
   .footer-container {
     width: 80%;
@@ -469,6 +465,19 @@ body > footer {
 
       &:hover {
         color: #fff;
+      }
+    }
+  }
+
+  .social-icons {
+    >a {
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
       }
     }
   }

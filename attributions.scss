@@ -1,0 +1,113 @@
+@import 'styles.scss';
+
+body {
+  color: rgb(208, 208, 208);
+}
+
+.navbar-top {
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  background: #111;
+  color: $cta-gold;
+
+  p {
+    text-align: left;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1.2rem;
+      top: calc(50% - 2.5px);
+      width: 5px;
+      height: 5px;
+      background: $cta-gold;
+      transform: rotate(45deg);
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Merienda', cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+  }
+
+  .menu {
+    text-align: right;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+
+    a {
+      margin: 0 0.3rem;
+    }
+  }
+}
+
+#attributions {
+  height: 90vh;
+  background: #111;
+  @extend %center-items;
+}
+
+.container {
+  width: fit-content;
+  margin: 0 auto;
+
+  >h2 {
+    margin-bottom: 4rem;
+  }
+
+  >h3 {
+    margin: 2rem 0;
+  }
+
+  >p {
+    margin-bottom: 1rem;
+
+    a {
+      color: $cta-gold;
+    }
+
+  }
+}
+
+
+body>footer {
+  padding: 4rem 2rem;
+  background: #111;
+  color: rgb(190, 190, 190);
+  line-height: 2;
+  font-size: 0.9rem;
+
+  .footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .footer-block {
+      width: 20%;
+
+      h4 {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .footer-navbar {
+    a {
+      display: block;
+      transition: all 200ms ease;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

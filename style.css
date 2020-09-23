@@ -336,8 +336,7 @@ button {
 }
 
 #overview {
-  background: #000 url("images/l2_04_flip.jpg") no-repeat center/cover;
-  background: #fff;
+  background-color: #f6f6f6;
 }
 
 #overview,
@@ -468,7 +467,7 @@ button {
 }
 
 .deco {
-  height: 50vh;
+  height: 20vh;
 }
 .deco-01 {
   background: url("images/l2_04.jpg") center/cover;
@@ -489,6 +488,7 @@ body > footer {
   color: #bebebe;
   line-height: 2;
   font-size: 0.9rem;
+  border-top: 2px solid #d7d7d7;
 }
 body > footer .footer-container {
   width: 80%;
@@ -508,6 +508,13 @@ body > footer .footer-navbar a {
 }
 body > footer .footer-navbar a:hover {
   color: #fff;
+}
+body > footer .social-icons > a:first-child {
+  margin-right: 0.5rem;
+}
+body > footer .social-icons > a img {
+  width: 32px;
+  height: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

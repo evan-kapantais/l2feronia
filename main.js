@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
   particlesJS.load('overview', 'particles.json');
   particlesJS.load('server', 'particles.json');
   particlesJS.load('server-details', 'particles.json');
-  particlesJS.load('footer', 'particles-footer.json');
 
   playIntroSequence();
 
@@ -21,8 +20,6 @@ const playIntroSequence = () => {
   const headerButtons = document.querySelectorAll('.primary-button');
   const banner = document.querySelector('#banner');
   const bannerNavbar = document.querySelector('.banner-navbar');
-
-  console.log(bannerNavbar);
 
   titleHeading.style.opacity = 1;
   titleHeading.style.transform = 'translateY(0)';
