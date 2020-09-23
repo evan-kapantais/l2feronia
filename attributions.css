@@ -153,15 +153,16 @@ body > footer {
   color: #bebebe;
   line-height: 2;
   font-size: 0.9rem;
+  border-top: 2px solid #d7d7d7;
 }
 body > footer .footer-container {
-  width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 body > footer .footer-container .footer-block {
   width: 20%;
+  padding: 0 4rem;
 }
 body > footer .footer-container .footer-block h4 {
   margin-bottom: 2rem;
@@ -172,6 +173,13 @@ body > footer .footer-navbar a {
 }
 body > footer .footer-navbar a:hover {
   color: #fff;
+}
+body > footer .social-icons > a:first-child {
+  margin-right: 0.5rem;
+}
+body > footer .social-icons > a img {
+  width: 32px;
+  height: 32px;
 }
 
 /*# sourceMappingURL=attributions.css.map */

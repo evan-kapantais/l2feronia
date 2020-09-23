@@ -84,15 +84,17 @@ body>footer {
   color: rgb(190, 190, 190);
   line-height: 2;
   font-size: 0.9rem;
+  border-top: 2px solid rgb(215, 215, 215);
 
   .footer-container {
-    width: 80%;
+    // width: 80%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     .footer-block {
       width: 20%;
+      padding: 0 4rem;
 
       h4 {
         margin-bottom: 2rem;
@@ -107,6 +109,19 @@ body>footer {
 
       &:hover {
         color: #fff;
+      }
+    }
+  }
+
+  .social-icons {
+    >a {
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
       }
     }
   }
