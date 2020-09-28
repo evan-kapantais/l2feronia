@@ -9,20 +9,39 @@ window.addEventListener('load', () => {
   particlesJS.load('server-details', 'particles.json');
 
   playIntroSequence();
+  initServerStatusMessage();
 
-  window.addEventListener('scroll', () => {
-    const scrollButton = document.querySelector('.scroll-button');
-    pageYOffset > 300
-      ? (scrollButton.style.opacity = 0)
-      : (scrollButton.style.opacity = 1);
-  });
+  setTimeout(() => {
+    window.addEventListener('scroll', () => {
+      const scrollButton = document.querySelector('.scroll-button');
+      pageYOffset > 300
+        ? (scrollButton.style.opacity = 0)
+        : (scrollButton.style.opacity = 1);
+    });
+  }, 5000);
 });
+
+const initServerStatusMessage = () => {
+  const serverStatusMessage = document.querySelector('.server-status');
+  const serverStatusDot = document.querySelector('.server-status-dot');
+
+  if (serverStatusMessage.classList.contains('offline')) {
+    const text = document.createTextNode('Offline');
+    serverStatusMessage.querySelector('p > abbr').append(text);
+    serverStatusDot.classList.add('server-status-dot-offline');
+  } else if (serverStatusMessage.classList.contains('live')) {
+    const text = document.createTextNode('Live');
+    serverStatusMessage.querySelector('p > abbr').append(text);
+    serverStatusDot.classList.add('server-status-dot-live');
+  }
+};
 
 const playIntroSequence = () => {
   const titleHeading = document.querySelector('.title-heading');
   const headerButtons = document.querySelectorAll('.primary-button');
   const banner = document.querySelector('#banner');
-  const bannerNavbar = document.querySelector('.banner-navbar');
+  // const opening = document.querySelector('.opening');
+  const scrollButton = document.querySelector('.scroll-button');
 
   titleHeading.style.opacity = 1;
   titleHeading.style.transform = 'translateY(0)';
@@ -32,6 +51,12 @@ const playIntroSequence = () => {
     button.style.opacity = 1;
   });
 
+  // setTimeout(() => {
+  //   opening.style.opacity = 1;
+  // }, 4000);
   banner.style.boxShadow = 'inset 0 -300px 300px black';
-  bannerNavbar.style.opacity = 1;
+
+  setTimeout(() => {
+    scrollButton.style.opacity = 1;
+  }, 4500);
 };
