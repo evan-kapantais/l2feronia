@@ -115,7 +115,7 @@ a {
 
 main {
   height: 100vh;
-  background: #111 url("images/discord.png") no-repeat center/cover;
+  background: #111 url("../images/discord.png") no-repeat center/cover;
   color: #fff;
   background-blend-mode: difference;
 }

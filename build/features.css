@@ -77,7 +77,7 @@ a {
 
 body {
   height: 100vh;
-  background: #111 url("images/l2_04.jpg") no-repeat center/cover;
+  background: #111 url("../images/l2_04.jpg") no-repeat center/cover;
   color: #d2d2d2;
 }
 

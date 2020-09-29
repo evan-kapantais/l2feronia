@@ -132,7 +132,7 @@
 
 #banner {
   height: 100vh;
-  background: url('images/l2_06.jpg') no-repeat center / cover;
+  background: url('../images/l2_06.jpg') no-repeat center / cover;
   @include box-shadow(-1200px);
   display: flex;
   justify-content: center;
@@ -168,22 +168,6 @@
       font-size: 8vw;
     }
   }
-
-  // .opening {
-  //   opacity: 0;
-  //   transition: all 1.5s ease-in-out;
-  //   color: $cta-gold;
-  //   font-family: 'Merienda', cursive;
-
-  //   h3 {
-  //     font-weight: 400;
-  //     font-size: 2rem;
-  //   }
-
-  //   h2 {
-  //     font-size: 4rem;
-  //   }
-  // }
 }
 
 button {
@@ -299,7 +283,7 @@ button {
 #vote-banner {
   @extend %center-items;
   font-family: 'Merienda', cursive;
-  background: url('images/l2_07.jpg') no-repeat center / cover;
+  background: url('../images/l2_07.jpg') no-repeat center / cover;
   box-shadow: inset 0 300px 300px black, inset 0 -300px 300px black;
 
   .container {
@@ -521,7 +505,7 @@ button {
 }
 
 #discord {
-  background: $discord-purple url('images/discord.png') no-repeat center / cover;
+  background: $discord-purple url('../images/discord.png') no-repeat center / cover;
   background-blend-mode: difference;
 
   @media only screen and (max-width: 740px) {
@@ -542,7 +526,7 @@ button {
 
 .deco {
   height: 10vh;
-  background: #111 url('images/l2_06.jpg') no-repeat 50% 100% / cover;
+  background: #111 url('../images/l2_06.jpg') no-repeat 50% 100% / cover;
   box-shadow: inset 0 -50px 20px rgba(0, 0, 0, 0.73);
 }
 
