@@ -93,6 +93,7 @@ a {
   font-weight: 600;
   font-size: 0.9rem;
   z-index: 1;
+  transition: all 1000ms ease-in-out;
 }
 .navbar .nav-link {
   margin: 0 0.5rem;

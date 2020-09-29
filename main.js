@@ -37,11 +37,21 @@ const initServerStatusMessage = () => {
 };
 
 const playIntroSequence = () => {
+  const navbar = document.querySelector('.navbar');
   const titleHeading = document.querySelector('.title-heading');
   const headerButtons = document.querySelectorAll('.primary-button');
   const banner = document.querySelector('#banner');
-  // const opening = document.querySelector('.opening');
   const scrollButton = document.querySelector('.scroll-button');
+
+  navbar.style.top = '-83px';
+  navbar.style.opacity = 0;
+  navbar.style.transform = 'rotateX(180deg)';
+
+  setTimeout(() => {
+    navbar.style.top = 0;
+    navbar.style.opacity = 1;
+    navbar.style.transform = 'rotateX(0)';
+  }, 3500);
 
   titleHeading.style.opacity = 1;
   titleHeading.style.transform = 'translateY(0)';
