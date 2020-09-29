@@ -83,14 +83,40 @@ a {
   color: inherit;
 }
 
+.navbar {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: #edd28c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+.navbar .nav-link {
+  margin: 0 0.5rem;
+}
+.navbar .nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  left: calc(50% - 2.5px);
+  width: 5px;
+  height: 5px;
+  background: #edd28c;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.navbar .nav-link:hover:after {
+  opacity: 1;
+  bottom: -1rem;
+}
+
 .server-status {
-  position: fixed;
   display: flex;
   align-items: center;
-  top: 2rem;
-  left: 2rem;
-  color: #fff;
-  z-index: 1;
 }
 .server-status abbr {
   text-decoration: none;
@@ -138,6 +164,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+  color: #edd28c;
   transition: box-shadow 3s 1s ease-in-out;
 }
 
