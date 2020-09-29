@@ -8,6 +8,8 @@ window.addEventListener('load', () => {
   particlesJS.load('server', 'particles.json');
   particlesJS.load('server-details', 'particles.json');
 
+  const backToTop = document.querySelector('.back-to-top');
+
   playIntroSequence();
   initServerStatusMessage();
 
@@ -19,6 +21,18 @@ window.addEventListener('load', () => {
         : (scrollButton.style.opacity = 1);
     });
   }, 5000);
+
+  window.addEventListener('scroll', () => {
+    if (pageYOffset > 1000) {
+      backToTop.style.opacity = 1;
+      backToTop.style.pointerEvents = 'auto';
+    } else {
+      backToTop.style.opacity = 0;
+      backToTop.style.pointerEvents = 'none';
+    }
+  });
+
+  backToTop.addEventListener('click', () => window.scrollTo(0, 0));
 });
 
 const initServerStatusMessage = () => {

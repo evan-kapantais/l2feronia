@@ -83,6 +83,43 @@ a {
   color: inherit;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  background: #111;
+  width: 50px;
+  height: 50px;
+  color: #edd28c;
+  border: 2px solid #edd28c;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 400ms ease-in-out;
+}
+.back-to-top:before {
+  content: "Back To Top";
+  position: absolute;
+  left: -6rem;
+  top: 50%;
+  font-weight: 600;
+  transform: translateY(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 400ms ease-in-out;
+}
+.back-to-top:hover:before {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #edd28c;
+  font-size: 1.5rem;
+}
+
 .navbar {
   position: absolute;
   width: 100%;
