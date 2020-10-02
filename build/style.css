@@ -1,6 +1,6 @@
 #overview,
 #server,
-#discord, #vote-banner .vote-card, #vote-banner, .header-buttons {
+#discord, #vote-banner .vote-card, #vote-banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +91,7 @@ a {
 
 #overview,
 #server,
-#discord, #vote-banner .vote-card, #vote-banner, .header-buttons {
+#discord, #vote-banner .vote-card, #vote-banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,7 +230,7 @@ body > footer .legal a:hover {
 
 #overview,
 #server,
-#discord, #vote-banner .vote-card, #vote-banner, .header-buttons {
+#discord, #vote-banner .vote-card, #vote-banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,7 +358,7 @@ a {
 
 #overview,
 #server,
-#discord, #vote-banner .vote-card, #vote-banner, .header-buttons {
+#discord, #vote-banner .vote-card, #vote-banner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -621,7 +621,6 @@ a {
 }
 
 .header-container {
-  margin-top: 6rem;
   text-align: center;
 }
 .header-container .title-heading {
@@ -652,74 +651,43 @@ button {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 615px) {
-  .header-buttons {
-    flex-direction: column;
-  }
-}
-
 .primary-button {
+  display: block;
   text-decoration: none;
+  width: fit-content;
+  margin: 0 auto;
   display: block;
   text-align: center;
   background: #111;
   color: #edd28c;
-  font-size: 1rem;
-  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  padding: 1rem 3rem;
   text-transform: uppercase;
   font-weight: 700;
   border: 1px solid #edd28c;
   overflow: hidden;
-  z-index: 19;
+  z-index: 1;
   opacity: 0;
   transition: background 300ms ease-in-out, opacity 1.5s 3s ease-in-out;
 }
-@media only screen and (max-width: 615px) {
-  .primary-button:first-of-type {
-    margin-bottom: 1rem;
-  }
-}
-.primary-button:hover {
-  background: #edd28c;
-  color: #333;
-}
-.primary-button:hover ~ p {
-  animation: help-text 1s 1.5s ease forwards;
-}
-.primary-button:hover + .button-accent {
-  opacity: 1;
-  transform: rotate(45deg);
-}
-
-.button-accent {
-  margin: 1rem auto 2rem auto;
+.primary-button:after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: calc(50% - 5px);
   width: 10px;
   height: 10px;
   background: #edd28c;
   opacity: 0;
   transition: opacity 300ms ease, transform 300ms 100ms ease;
 }
-@media only screen and (max-width: 615px) {
-  .button-accent {
-    display: none;
-  }
+.primary-button:hover {
+  background: #edd28c;
+  color: #333;
 }
-
-.button-container {
-  padding: 0 1rem;
-}
-.button-container p {
-  position: absolute;
-  color: #d7d7d7;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
-  opacity: 0;
-}
-@media only screen and (max-width: 615px) {
-  .button-container p {
-    display: none;
-  }
+.primary-button:hover:after {
+  opacity: 1;
+  transform: rotate(45deg);
 }
 
 .scroll-button {

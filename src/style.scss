@@ -67,7 +67,6 @@
 }
 
 .header-container {
-  margin-top: 6rem;
   text-align: center;
 
   .title-heading {
@@ -100,35 +99,36 @@ button {
   cursor: pointer;
 }
 
-.header-buttons {
-  @extend %center-items;
-
-  @media only screen and (max-width: 615px) {
-    flex-direction: column;
-  }
-}
-
 .primary-button {
+  display: block;
   text-decoration: none;
+  width: fit-content;
+  margin: 0 auto;
   display: block;
   text-align: center;
   background: #111;
   color: $cta-gold;
-  font-size: 1rem;
-  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  padding: 1rem 3rem;
   text-transform: uppercase;
   font-weight: 700;
   border: 1px solid $cta-gold;
   overflow: hidden;
-  z-index: 19;
+  z-index: 1;
   opacity: 0;
   transition: background 300ms ease-in-out,
     opacity $banner-buttons-fade-duration $banner-buttons-fade-delay ease-in-out;
 
-  @media only screen and (max-width: 615px) {
-    &:first-of-type {
-      margin-bottom: 1rem;
-    }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    background: $cta-gold;
+    opacity: 0;
+    transition: opacity 300ms ease, transform 300ms 100ms ease;
   }
 
   &:hover {
@@ -136,43 +136,9 @@ button {
     color: #333;
   }
 
-  &:hover~p {
-    animation: help-text 1s 1.5s ease forwards;
-  }
-
-  &:hover+.button-accent {
+  &:hover:after {
     opacity: 1;
     transform: rotate(45deg);
-  }
-}
-
-.button-accent {
-  margin: 1rem auto 2rem auto;
-  width: 10px;
-  height: 10px;
-  background: $cta-gold;
-  opacity: 0;
-  transition: opacity 300ms ease, transform 300ms 100ms ease;
-
-  @media only screen and (max-width: 615px) {
-    display: none;
-  }
-}
-
-.button-container {
-  padding: 0 1rem;
-
-  p {
-    position: absolute;
-    color: rgb(215, 215, 215);
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    opacity: 0;
-
-    @media only screen and (max-width: 615px) {
-      display: none;
-    }
   }
 }
 
