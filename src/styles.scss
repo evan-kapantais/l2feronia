@@ -104,6 +104,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -132,4 +133,12 @@ a {
   color: $cta-gold;
   font-family: 'Merienda', cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: rgb(255, 234, 181);
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }

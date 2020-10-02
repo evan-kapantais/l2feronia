@@ -59,6 +59,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -87,6 +88,14 @@ a {
   color: #edd28c;
   font-family: "Merienda", cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 #overview,
@@ -150,6 +159,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -178,6 +188,14 @@ a {
   color: #edd28c;
   font-family: "Merienda", cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 body > footer {
@@ -289,6 +307,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -317,6 +336,14 @@ a {
   color: #edd28c;
   font-family: "Merienda", cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 .back-to-top {
@@ -417,6 +444,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -445,6 +473,14 @@ a {
   color: #edd28c;
   font-family: "Merienda", cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 .server-status {
@@ -570,12 +606,29 @@ a {
   display: flex;
   align-items: center;
 }
+.server-status:first-child {
+  margin-bottom: 0.2rem;
+}
 .server-status abbr {
   text-decoration: none;
 }
 .server-status p {
   user-select: none;
   margin-left: 0.5rem;
+}
+
+.status-dot-live {
+  background: green;
+}
+.status-dot-live:before {
+  background: #4ac94a;
+}
+
+.status-dot-offline {
+  background: #ec5151;
+}
+.status-dot-offline:before {
+  background: #ab0c0c;
 }
 
 .server-status-dot {
@@ -592,20 +645,6 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-}
-
-.server-status-dot-live {
-  background: green;
-}
-.server-status-dot-live:before {
-  background: #4ac94a;
-}
-
-.server-status-dot-offline {
-  background: #ec5151;
-}
-.server-status-dot-offline:before {
-  background: #ab0c0c;
 }
 
 #banner {

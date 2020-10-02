@@ -14,9 +14,15 @@
 <body>
   <header>
     <nav class="navbar banner-navbar">
-      <div class="server-status live">
-        <div class="server-status-dot"></div>
-        <p><abbr title="Server Status"></abbr></p>
+      <div class="server-status-wrapper">
+        <div id="loginserver-status" class="server-status live">
+          <div id="loginserver-status-dot" class="server-status-dot"></div>
+          <p><abbr title="">Login Server</abbr></p>
+        </div>
+        <div id="gameserver-status" class="server-status live">
+          <div id="gameserver-status-dot" class="server-status-dot"></div>
+          <p><abbr title="Game Server Status">Game Server</abbr></p>
+        </div>
       </div>
       <div class="menu">
         <a class="nav-link" href="/">Home</a>

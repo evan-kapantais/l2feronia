@@ -36,17 +36,38 @@ window.addEventListener('load', () => {
 });
 
 const initServerStatusMessage = () => {
-  const serverStatusMessage = document.querySelector('.server-status');
-  const serverStatusDot = document.querySelector('.server-status-dot');
+  const loginserverStatusMessage = document.getElementById(
+    'loginserver-status'
+  );
+  const loginserverStatusDot = document.getElementById(
+    'loginserver-status-dot'
+  );
 
-  if (serverStatusMessage.classList.contains('offline')) {
-    const text = document.createTextNode('Offline');
-    serverStatusMessage.querySelector('p > abbr').append(text);
-    serverStatusDot.classList.add('server-status-dot-offline');
-  } else if (serverStatusMessage.classList.contains('live')) {
-    const text = document.createTextNode('Live');
-    serverStatusMessage.querySelector('p > abbr').append(text);
-    serverStatusDot.classList.add('server-status-dot-live');
+  const gameserverStatusMessage = document.getElementById('gameserver-status');
+  const gameserverStatusDot = document.getElementById('gameserver-status-dot');
+
+  if (loginserverStatusMessage.classList.contains('offline')) {
+    loginserverStatusMessage
+      .querySelector('p > abbr')
+      .setAttribute('title', 'Status: Offline');
+    loginserverStatusDot.classList.add('status-dot-offline');
+  } else if (loginserverStatusMessage.classList.contains('live')) {
+    loginserverStatusMessage
+      .querySelector('p > abbr')
+      .setAttribute('title', 'Status: Live');
+    loginserverStatusDot.classList.add('status-dot-live');
+  }
+
+  if (gameserverStatusMessage.classList.contains('offline')) {
+    gameserverStatusMessage
+      .querySelector('p > abbr')
+      .setAttribute('title', 'Status: Offline');
+    gameserverStatusDot.classList.add('status-dot-offline');
+  } else if (gameserverStatusMessage.classList.contains('live')) {
+    gameserverStatusMessage
+      .querySelector('p > abbr')
+      .setAttribute('title', 'Status: Live');
+    gameserverStatusDot.classList.add('status-dot-live');
   }
 };
 
