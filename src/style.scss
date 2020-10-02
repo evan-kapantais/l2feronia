@@ -8,6 +8,8 @@
 .server-status {
   display: flex;
   align-items: center;
+  font-variant: small-caps;
+  cursor: help;
 
   &:first-child {
     margin-bottom: 0.2rem;
@@ -54,6 +56,10 @@
     height: 100%;
     border-radius: 50%;
   }
+}
+
+.navbar {
+  align-items: start;
 }
 
 // Banner
