@@ -455,6 +455,9 @@ body > footer .legal a:hover {
 }
 
 .connect-instructions li {
+  padding: 0.5rem;
+  box-shadow: 0 0 1px #4e4e4e;
+  border-radius: 3px;
   line-height: 1.5;
   margin: 2rem 0;
   font-size: 1.1rem;
