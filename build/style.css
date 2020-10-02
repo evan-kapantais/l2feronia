@@ -668,7 +668,7 @@ button {
   overflow: hidden;
   z-index: 1;
   opacity: 0;
-  transition: background 300ms ease-in-out, opacity 1.5s 3s ease-in-out;
+  transition: background 300ms ease-in-out, opacity 1.5s 3s ease-in-out, box-shadow 500ms ease-in-out;
 }
 .primary-button:after {
   content: "";
@@ -684,6 +684,7 @@ button {
 .primary-button:hover {
   background: #edd28c;
   color: #333;
+  box-shadow: 0 0 20px #edd28c;
 }
 .primary-button:hover:after {
   opacity: 1;
