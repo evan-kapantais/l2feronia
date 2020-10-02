@@ -3,6 +3,7 @@
 $primary-text-color: #333;
 $navy-blue: #19345c;
 $cta-gold: rgb(237, 210, 140);
+$light-gold: rgb(255, 234, 181);
 $discord-purple: #2a2841;
 
 // Sizes
@@ -101,8 +102,8 @@ $banner-navbar-fade-duration: 2s;
 html,
 body {
   font-family: 'Open Sans', sans-serif;
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  color: #111;
 }
 
 ul {
@@ -125,4 +126,10 @@ canvas {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.page-heading {
+  color: $cta-gold;
+  font-family: 'Merienda', cursive;
+  font-size: 2.5rem;
 }

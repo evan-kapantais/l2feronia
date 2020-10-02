@@ -283,131 +283,177 @@ a {
   color: #111;
 }
 
-header {
-  background: #111;
+@keyframes scroll-button {
+  from {
+    transform: rotate(45deg) translateX(-50%);
+  }
+  to {
+    transform: rotate(45deg) translateX(-50%);
+  }
+  50% {
+    transform: rotate(45deg) translateX(-25%) translateY(5px);
+  }
+}
+@keyframes help-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.navbar {
-  display: grid;
-  background: #111;
-  grid-template-columns: repeat(3, 1fr);
-}
-.navbar > a:nth-child(2) {
-  text-align: center;
-}
-.navbar > .menu {
-  text-align: right;
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
 }
 
-#tabs {
-  height: 100vh;
-  padding: 0 2rem;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #333;
 }
 
-.tabs-container {
-  margin: 12rem auto 0 auto;
-  border-radius: 5px;
-  padding: 2rem;
-  max-width: 800px;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #edd28c;
 }
-.tabs-container h1 {
-  margin-bottom: 4rem;
-  text-align: center;
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #deba5f;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  color: #111;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-heading {
+  color: #edd28c;
+  font-family: "Merienda", cursive;
   font-size: 2.5rem;
 }
 
-.tab-buttons {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.tab-button {
-  margin: 0 0.2rem;
-  padding: 0.8rem;
-  font-size: 1rem;
-  font-weight: 600;
-  background: none;
-  outline: none;
-  border: none;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-  color: rgba(17, 17, 17, 0.442);
-  transition: all 300ms ease-in-out;
-}
-.tab-button:before {
-  content: "";
-  position: absolute;
-  left: calc(50% - 2.5px);
-  bottom: 0px;
+body > footer {
+  padding-top: 4rem;
   background: #111;
-  width: 5px;
-  height: 5px;
-  transform: rotate(45deg);
-  opacity: 0;
-  transition: all 300ms ease-in-out;
+  color: #bebebe;
+  line-height: 2;
+  font-size: 0.9rem;
+  border-top: 2px solid #d7d7d7;
 }
-.tab-button:hover {
-  color: #111;
-}
-
-.tab-button-active {
-  color: #111;
-}
-.tab-button-active:before {
-  opacity: 1;
-}
-
-.tab {
-  display: none;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: translate 200ms ease-in-out;
-}
-.tab h2 {
-  margin-bottom: 2.5rem;
-}
-
-.tab-active {
-  display: block;
-  opacity: 1;
-}
-
-.tab-text {
+body > footer .footer-container {
+  margin: 0 auto 4rem auto;
   display: flex;
+  justify-content: center;
 }
-.tab-text > div {
-  width: 50%;
+body > footer .footer-container .footer-block {
+  width: 20%;
+  padding: 0 4rem;
 }
-
-.row {
+body > footer .footer-container .footer-block h4 {
+  margin-bottom: 2rem;
+}
+body > footer .footer-navbar a {
+  display: block;
+  transition: all 200ms ease;
+}
+body > footer .footer-navbar a:hover {
+  color: #fff;
+}
+body > footer .social-icons > a:first-child {
+  margin-right: 0.5rem;
+}
+body > footer .social-icons > a img {
+  width: 32px;
+  height: 32px;
+}
+body > footer .legal {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.25rem;
+  align-items: center;
+  background: #1b1b1b;
+  padding: 1rem 2rem;
 }
-.row abbr {
-  font-size: 0.85rem;
-  cursor: help;
+body > footer .legal a {
+  color: #edd28c;
+}
+body > footer .legal a:hover {
+  text-decoration: underline;
 }
 
-.description-item {
+#how-to-connect {
+  padding: 8rem 0;
+}
+#how-to-connect .container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  max-width: 650px;
+}
+#how-to-connect .container hr {
+  margin: 1rem 0 4rem 0;
+  width: 10%;
+}
+
+.connect-instructions li {
+  line-height: 1.5;
   margin: 2rem 0;
-}
-.description-item p {
-  margin-bottom: 0.5rem;
-}
-.description-item i {
-  display: block;
-  color: #656565;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+  list-style-type: decimal;
+  list-style-position: inside;
+  display: list-item;
 }
 
-hr {
-  margin: 2rem 0 4rem 0;
-  border: 1px solid #efefef;
+.inline-link {
+  color: #ff8250;
+}
+.inline-link:hover {
+  text-decoration: underline;
 }
 
-/*# sourceMappingURL=features.css.map */
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.note {
+  color: #de2d2d;
+  margin-top: 4rem;
+}
+
+/*# sourceMappingURL=connect.css.map */

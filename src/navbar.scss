@@ -1,0 +1,138 @@
+@import 'styles.scss';
+
+// Server status
+
+.server-status {
+  display: flex;
+  align-items: center;
+
+  abbr {
+    text-decoration: none;
+  }
+
+  p {
+    user-select: none;
+    margin-left: 0.5rem;
+  }
+}
+
+.server-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 30%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.server-status-dot-live {
+  background: green;
+
+  &:before {
+    background: rgb(74, 201, 74);
+  }
+}
+
+.server-status-dot-offline {
+  background: rgb(236, 81, 81);
+
+  &:before {
+    background: rgb(171, 12, 12);
+  }
+}
+
+// Brand link
+
+#brand {
+  font-family: 'Merienda', cursive;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+// Navbar
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  color: $cta-gold;
+  font-weight: 600;
+  z-index: 1;
+  transition: all 1000ms ease-in-out;
+
+  .nav-link {
+    margin: 0 0.5rem;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      left: calc(50% - 2.5px);
+      width: 5px;
+      height: 5px;
+      background: $cta-gold;
+      transform: rotate(45deg);
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+
+    &:hover:after {
+      opacity: 1;
+      bottom: -1rem;
+    }
+  }
+
+  .current-nav-link {
+    pointer-events: none;
+    width: fit-content;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: calc(50% - 2.5px);
+      width: 5px;
+      height: 5px;
+      background: $cta-gold;
+      transform: rotate(45deg);
+      transition: all 200ms ease-in-out;
+    }
+  }
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  #brand {
+    text-align: center;
+  }
+
+  .menu {
+    text-align: right;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+
+.dark {
+  background: #111;
+}
+
+.light {
+  color: #111;
+}

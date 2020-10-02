@@ -1,0 +1,41 @@
+@import 'styles.scss';
+
+.back-to-top {
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  background: #111;
+  width: 50px;
+  height: 50px;
+  color: $cta-gold;
+  border: 2px solid $cta-gold;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 400ms ease-in-out;
+
+  &:before {
+    content: 'Back To Top';
+    position: absolute;
+    left: -6rem;
+    top: 50%;
+    font-weight: 600;
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease-in-out;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $cta-gold;
+    font-size: 1.5rem;
+  }
+}

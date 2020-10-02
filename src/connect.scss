@@ -1,0 +1,51 @@
+@import 'styles.scss';
+@import 'navbar.scss';
+@import 'footer.scss';
+
+#how-to-connect {
+  padding: 8rem 0;
+
+
+  .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: 650px;
+
+    hr {
+      margin: 1rem 0 4rem 0;
+      width: 10%;
+    }
+  }
+}
+
+.connect-instructions {
+  li {
+    line-height: 1.5;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    list-style-type: decimal;
+    list-style-position: inside;
+    display: list-item;
+  }
+}
+
+.inline-link {
+  color: rgb(255, 130, 80);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+code {
+  background: rgb(255, 234, 181);
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.note {
+  color: rgb(222, 45, 45);
+  margin-top: 4rem;
+}

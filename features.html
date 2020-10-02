@@ -1,41 +1,368 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="build/features.css" />
+    <link rel="stylesheet" href="build/footer.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <title>Features | L2 Feronia</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="features.css" />
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <title>Features | L2 Feronia</title>
-</head>
-
-<body id="body">
-  <nav class="top-navbar">
-    <h1>Feronia</h1>
-    <div>
-      <a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="#">Connect</a>
-      <a class="nav-link active-link" href="features.html">Features</a>
-      <a class="nav-link" href="#">Discord</a>
-      <a class="nav-link" href="#">News</a>
-      <a class="nav-link" href="#">Donate</a>
-    </div>
-  </nav>
-  <section id="features">
-    <div class="container">
-      <div class="features-card">
-        <h2>Custom Server Features</h2>
-        <p>Flag PVP zones and custom areas</p>
-        <p>Teleport ex .giran commands</p>
-        <p>Bank system ex .withdraw and .deposit commands</p>
-        <p>Vote system rewards</p>
-        <p>PVP count rewards</p>
-        <p>Nobles manager</p>
-        <p>20 types of custom events with our test event engine</p>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a class="current-nav-link" href="/features.html">Features</a>
+        <a id="brand" href="/">
+          <h1>Feronia</h1>
+        </a>
+        <div class="menu">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/features.html">Features</a>
+          <a class="nav-link" href="/forum">Forum</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="tabs">
+        <div class="tabs-container">
+          <h1>Server Features</h1>
+          <div class="tab-buttons">
+            <button type="button" onclick="showTab('rates')" class="tab-button">
+              Rates
+            </button>
+            <button
+              type="button"
+              onclick="showTab('enchant')"
+              class="tab-button"
+            >
+              Enchant
+            </button>
+            <button
+              type="button"
+              onclick="showTab('economy')"
+              class="tab-button"
+            >
+              Economy
+            </button>
+            <button type="button" onclick="showTab('npcs')" class="tab-button">
+              NPCs
+            </button>
+            <button
+              type="button"
+              onclick="showTab('armour')"
+              class="tab-button"
+            >
+              Armour
+            </button>
+            <button
+              type="button"
+              onclick="showTab('commands')"
+              class="tab-button"
+            >
+              Commands
+            </button>
+            <button type="button" onclick="showTab('areas')" class="tab-button">
+              Areas
+            </button>
+            <button
+              type="button"
+              onclick="showTab('features')"
+              class="tab-button"
+            >
+              Features
+            </button>
+          </div>
+          <hr />
+          <div class="tab" id="rates">
+            <div class="tab-content">
+              <h2>Server Rates</h2>
+              <div class="row">
+                <p>Xp Rate</p>
+                <p>x100</p>
+              </div>
+              <div class="row">
+                <p>Sp Rate</p>
+                <p>x100</p>
+              </div>
+              <div class="row">
+                <p>Party Xp Rate</p>
+                <p>x200</p>
+              </div>
+              <div class="row">
+                <p>Drop Rate</p>
+                <p>x1</p>
+              </div>
+              <div class="row">
+                <p>Raid Drop Rate</p>
+                <p>x1</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="enchant">
+            <div class="tab-content">
+              <h2>Server Enchantment</h2>
+              <div class="row">
+                <p>Enchantment</p>
+                <p>+4 (Max +20)</p>
+              </div>
+              <div class="row">
+                <p>Normal Scroll Success Rate</p>
+                <p>70%</p>
+              </div>
+              <div class="row">
+                <p>Blessed Scroll Success rate</p>
+                <p>80%</p>
+              </div>
+              <div class="row">
+                <p>Vote Scroll Success Rate</p>
+                <p>90%</p>
+              </div>
+              <div class="row">
+                <p>Attributes Success Rate</p>
+                <p>75%</p>
+              </div>
+              <div class="row">
+                <p>Crystal Attributes Success Rate</p>
+                <p>75%</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="economy">
+            <div class="tab-content">
+              <h2>Server Economy</h2>
+              <div class="row">
+                <p>Adena</p>
+              </div>
+              <div class="row">
+                <p>Festival Adena</p>
+              </div>
+              <div class="row">
+                <p>Vote Coins</p>
+              </div>
+              <div class="row">
+                <p>Donation Coins</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="npcs">
+            <div class="tab-content">
+              <h2 class="tab-heading">Custom Server NPCs</h2>
+              <div class="tab-text">
+                <div>
+                  <div class="row">
+                    <p>Global Gatekeeper</p>
+                  </div>
+                  <div class="row">
+                    <p>Buffer with Character Profiles</p>
+                  </div>
+                  <div class="row">
+                    <p>Donation Shop</p>
+                  </div>
+                  <div class="row">
+                    <p>Nobless Manager</p>
+                  </div>
+                  <div class="row">
+                    <p>Grandboss Manager</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="row">
+                    <p>GM Shop</p>
+                  </div>
+                  <div class="row">
+                    <p>Wedding Manager</p>
+                  </div>
+                  <div class="row">
+                    <p>Point Manager</p>
+                  </div>
+                  <div class="row">
+                    <p>Service Manager</p>
+                  </div>
+                  <div class="row">
+                    <p>Bug Report Manager</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="armour">
+            <div class="tab-content">
+              <h2>Top Armour & Jewels</h2>
+              <div class="row">
+                <p>Elegia Armour</p>
+              </div>
+              <div class="row">
+                <p>Elegia Weapons</p>
+              </div>
+              <div class="row">
+                <p>Boss Jewels / Top s84 Jewels</p>
+              </div>
+              <div class="row">
+                <p><b>NO</b> Custom Items</p>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="commands">
+            <div class="tab-content">
+              <h2>Custom Voice Commands</h2>
+              <div class="tab-text">
+                <div>
+                  <div class="row">
+                    <p>.getmarried</p>
+                  </div>
+                  <div class="row">
+                    <p>.premium</p>
+                  </div>
+                  <div class="row">
+                    <p>.online</p>
+                  </div>
+                  <div class="row">
+                    <p>.register .unregister (events)</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="row">
+                    <p>.withdraw .deposit</p>
+                    <span
+                      ><abbr title="1 billion Adena = 1 gold bar"
+                        >info</abbr
+                      ></span
+                    >
+                  </div>
+                  <div class="row">
+                    <p>.giran, .dion, .goddard, etc.</p>
+                    <span><abbr title="teleport back to town">info</abbr></span>
+                  </div>
+                  <div class="row">
+                    <p>.enter, .return, .zone</p>
+                    <span
+                      ><abbr title="move to Chaotic Zone / PVP"
+                        >info</abbr
+                      ></span
+                    >
+                  </div>
+                  <div class="row">
+                    <p>.getrewards</p>
+                    <span
+                      ><abbr
+                        title="works only if you have voted for L2 Feronia
+                      on all Top Sites"
+                        >info</abbr
+                      ></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="areas">
+            <div class="tab-content">
+              <h2>Custom Areas</h2>
+              <div class="description-item">
+                <p>Chaotic Zone</p>
+                <i
+                  >You can only enter using the voice commands. You will be
+                  transferred to the Chaotic Zone with Flaged and Nobless
+                  buff.</i
+                >
+              </div>
+              <div class="description-item">
+                <p>Solo Farm Zone</p>
+                <i
+                  >Area that will be beneficial to your in late-game. You will
+                  find the most valuable items of L2 Feronia with an extremely
+                  low drop rate.</i
+                >
+              </div>
+              <div class="description-item">
+                <p>Party Farm Zone</p>
+                <i
+                  >High drop rate area. Use it at your own risk and don't forget
+                  to bring some friends.</i
+                >
+              </div>
+              <div class="description-item">
+                <p>Hellbound</p>
+                <i
+                  >For 80-82 level players. Here you can farm Adena, Festival
+                  Adena and Stones for Attributes.</i
+                >
+              </div>
+            </div>
+          </div>
+          <div class="tab" id="features">
+            <div class="tab-content">
+              <h2>Additional Features</h2>
+              <div class="row">
+                <p>Functioning bosses and instances</p>
+              </div>
+              <div class="row">
+                <p>Cancel-return debuff system (20 seconds)</p>
+              </div>
+              <div class="row">
+                <p>PVP reward system / 5 Festival Adena per kill</p>
+              </div>
+              <div class="row">
+                <p>More than 12 types of custom events</p>
+              </div>
+              <div class="row">
+                <p>Custom community board</p>
+              </div>
+              <div class="row">
+                <p>Premium accounts (get info using .premium in-game)</p>
+              </div>
+              <div class="row">
+                <p>Top rank system</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-block">
+          <h4>About</h4>
+          <p>
+            We are a small group of friends who used to play Lineage 2 during
+            its golden era. Recently, we came up with the idea of starting our
+            own private L2 server. We hope you enjoy your time with us!
+          </p>
+        </div>
+        <div class="footer-block">
+          <h4>Site Map</h4>
+          <nav class="footer-navbar">
+            <a class="nav-link" href="#banner">Home</a>
+            <a class="nav-link" href="#banner">Connect</a>
+            <a class="nav-link" href="#discord">Discord</a>
+            <a class="nav-link" href="attributions.html">Attributions</a>
+          </nav>
+        </div>
+        <div class="footer-block">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a
+              href="https://discord.com/invite/NVxTmH?utm_source=Discord%20Widget&utm_medium=Connect"
+            >
+              <img src="images/social/discord.png" alt="discord icon" />
+            </a>
+            <a class="nav-link" href="https://www.facebook.com/L2Feronia/">
+              <img src="images/social/facebook.png" alt="facebook icon" />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <script src="features.js"></script>
-</body>
-
+      <div class="legal">
+        <p>&copy; L2 Feronia</p>
+        <p>
+          Page created by
+          <a class="nav-link" href="https://www.instagram.com/evan_kapantais/"
+            >Evan Kapantais</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="features.js"></script>
+  </body>
 </html>
