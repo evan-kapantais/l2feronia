@@ -1,79 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="build/features.css" />
-    <link rel="stylesheet" href="build/footer.css" />
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <title>Features | L2 Feronia</title>
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <a class="current-nav-link" href="/features.html">Features</a>
-        <a id="brand" href="/">
-          <h1>Feronia</h1>
-        </a>
-        <div class="menu">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/features.html">Features</a>
-          <a class="nav-link" href="/forum">Forum</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="build/features.css" />
+  <link rel="stylesheet" href="build/footer.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <title>Features | L2 Feronia</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar dark">
+      <a class="current-nav-link" href="/features.html">Features</a>
+      <a id="brand" href="/">
+        <h1>Feronia</h1>
+      </a>
+      <div class="menu">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/features.html">Features</a>
+        <a class="nav-link" href="/forum">Forum</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="tabs">
+      <div class="tabs-container">
+        <h1>Server Features</h1>
+        <div class="tab-buttons">
+          <button type="button" onclick="showTab('rates')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/015-letter.png" alt="letter icon">
+            Rates
+          </button>
+          <button type="button" onclick="showTab('enchant')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/018-magic wand.png" alt="letter icon">
+            Enchant
+          </button>
+          <button type="button" onclick="showTab('economy')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/024-tokens.png" alt="letter icon">
+            Economy
+          </button>
+          <button type="button" onclick="showTab('npcs')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/016-wizard.png" alt="letter icon">
+            NPCs
+          </button>
+          <button type="button" onclick="showTab('armour')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/002-armor.png" alt="letter icon">
+            Armour
+          </button>
+          <button type="button" onclick="showTab('commands')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/007-controller.png" alt="letter icon">
+            Commands
+          </button>
+          <button type="button" onclick="showTab('areas')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/019-treasure map.png" alt="letter icon">
+            Areas
+          </button>
+          <button type="button" onclick="showTab('features')" class="tab-button">
+            <img class="game-icon" src="images/game-icons/005-card.png" alt="letter icon">
+            Features
+          </button>
         </div>
-      </nav>
-    </header>
-    <main>
-      <section id="tabs">
-        <div class="tabs-container">
-          <h1>Server Features</h1>
-          <div class="tab-buttons">
-            <button type="button" onclick="showTab('rates')" class="tab-button">
-              Rates
-            </button>
-            <button
-              type="button"
-              onclick="showTab('enchant')"
-              class="tab-button"
-            >
-              Enchant
-            </button>
-            <button
-              type="button"
-              onclick="showTab('economy')"
-              class="tab-button"
-            >
-              Economy
-            </button>
-            <button type="button" onclick="showTab('npcs')" class="tab-button">
-              NPCs
-            </button>
-            <button
-              type="button"
-              onclick="showTab('armour')"
-              class="tab-button"
-            >
-              Armour
-            </button>
-            <button
-              type="button"
-              onclick="showTab('commands')"
-              class="tab-button"
-            >
-              Commands
-            </button>
-            <button type="button" onclick="showTab('areas')" class="tab-button">
-              Areas
-            </button>
-            <button
-              type="button"
-              onclick="showTab('features')"
-              class="tab-button"
-            >
-              Features
-            </button>
-          </div>
-          <hr />
+        <hr />
+        <div class="tab-panels-wrapper">
           <div class="tab" id="rates">
             <div class="tab-content">
               <h2>Server Rates</h2>
@@ -224,11 +214,7 @@
                 <div>
                   <div class="row">
                     <p>.withdraw .deposit</p>
-                    <span
-                      ><abbr title="1 billion Adena = 1 gold bar"
-                        >info</abbr
-                      ></span
-                    >
+                    <span><abbr title="1 billion Adena = 1 gold bar">info</abbr></span>
                   </div>
                   <div class="row">
                     <p>.giran, .dion, .goddard, etc.</p>
@@ -236,21 +222,12 @@
                   </div>
                   <div class="row">
                     <p>.enter, .return, .zone</p>
-                    <span
-                      ><abbr title="move to Chaotic Zone / PVP"
-                        >info</abbr
-                      ></span
-                    >
+                    <span><abbr title="move to Chaotic Zone / PVP">info</abbr></span>
                   </div>
                   <div class="row">
                     <p>.getrewards</p>
-                    <span
-                      ><abbr
-                        title="works only if you have voted for L2 Feronia
-                      on all Top Sites"
-                        >info</abbr
-                      ></span
-                    >
+                    <span><abbr title="works only if you have voted for L2 Feronia
+                        on all Top Sites">info</abbr></span>
                   </div>
                 </div>
               </div>
@@ -261,33 +238,25 @@
               <h2>Custom Areas</h2>
               <div class="description-item">
                 <p>Chaotic Zone</p>
-                <i
-                  >You can only enter using the voice commands. You will be
+                <i>You can only enter using the voice commands. You will be
                   transferred to the Chaotic Zone with Flaged and Nobless
-                  buff.</i
-                >
+                  buff.</i>
               </div>
               <div class="description-item">
                 <p>Solo Farm Zone</p>
-                <i
-                  >Area that will be beneficial to your in late-game. You will
+                <i>Area that will be beneficial to your in late-game. You will
                   find the most valuable items of L2 Feronia with an extremely
-                  low drop rate.</i
-                >
+                  low drop rate.</i>
               </div>
               <div class="description-item">
                 <p>Party Farm Zone</p>
-                <i
-                  >High drop rate area. Use it at your own risk and don't forget
-                  to bring some friends.</i
-                >
+                <i>High drop rate area. Use it at your own risk and don't forget
+                  to bring some friends.</i>
               </div>
               <div class="description-item">
                 <p>Hellbound</p>
-                <i
-                  >For 80-82 level players. Here you can farm Adena, Festival
-                  Adena and Stones for Attributes.</i
-                >
+                <i>For 80-82 level players. Here you can farm Adena, Festival
+                  Adena and Stones for Attributes.</i>
               </div>
             </div>
           </div>
@@ -318,51 +287,49 @@
             </div>
           </div>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <div class="footer-block">
-          <h4>About</h4>
-          <p>
-            We are a small group of friends who used to play Lineage 2 during
-            its golden era. Recently, we came up with the idea of starting our
-            own private L2 server. We hope you enjoy your time with us!
-          </p>
-        </div>
-        <div class="footer-block">
-          <h4>Site Map</h4>
-          <nav class="footer-navbar">
-            <a class="nav-link" href="#banner">Home</a>
-            <a class="nav-link" href="#banner">Connect</a>
-            <a class="nav-link" href="#discord">Discord</a>
-            <a class="nav-link" href="attributions.html">Attributions</a>
-          </nav>
-        </div>
-        <div class="footer-block">
-          <h4>Connect</h4>
-          <div class="social-icons">
-            <a
-              href="https://discord.com/invite/NVxTmH?utm_source=Discord%20Widget&utm_medium=Connect"
-            >
-              <img src="images/social/discord.png" alt="discord icon" />
-            </a>
-            <a class="nav-link" href="https://www.facebook.com/L2Feronia/">
-              <img src="images/social/facebook.png" alt="facebook icon" />
-            </a>
-          </div>
-        </div>
       </div>
-      <div class="legal">
-        <p>&copy; L2 Feronia</p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-block">
+        <h4>About</h4>
         <p>
-          Page created by
-          <a class="nav-link" href="https://www.instagram.com/evan_kapantais/"
-            >Evan Kapantais</a
-          >
+          We are a small group of friends who used to play Lineage 2 during
+          its golden era. Recently, we came up with the idea of starting our
+          own private L2 server. We hope you enjoy your time with us!
         </p>
       </div>
-    </footer>
-    <script src="features.js"></script>
-  </body>
+      <div class="footer-block">
+        <h4>Site Map</h4>
+        <nav class="footer-navbar">
+          <a class="nav-link" href="#banner">Home</a>
+          <a class="nav-link" href="#banner">Connect</a>
+          <a class="nav-link" href="#discord">Discord</a>
+          <a class="nav-link" href="attributions.html">Attributions</a>
+        </nav>
+      </div>
+      <div class="footer-block">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://discord.com/invite/NVxTmH?utm_source=Discord%20Widget&utm_medium=Connect">
+            <img src="images/social/discord.png" alt="discord icon" />
+          </a>
+          <a class="nav-link" href="https://www.facebook.com/L2Feronia/">
+            <img src="images/social/facebook.png" alt="facebook icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <p>&copy; L2 Feronia</p>
+      <p>
+        Page created by
+        <a class="nav-link" href="https://www.instagram.com/evan_kapantais/">Evan Kapantais</a>
+      </p>
+    </div>
+  </footer>
+  <script src="features.js"></script>
+</body>
+
 </html>

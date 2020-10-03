@@ -1,8 +1,18 @@
 @import 'styles.scss';
 @import 'navbar.scss';
 
-header {
-  background: #111;
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .navbar {
@@ -25,15 +35,17 @@ header {
 }
 
 .tabs-container {
-  margin: 12rem auto 0 auto;
+  margin: 12rem auto;
   border-radius: 5px;
   padding: 2rem;
   max-width: 800px;
+  background: rgba(255, 255, 255, 0.922);
 
   h1 {
-    margin-bottom: 4rem;
+    margin: 4rem auto;
     text-align: center;
     font-size: 2.5rem;
+    width: fit-content;
   }
 }
 
@@ -45,7 +57,6 @@ header {
 
 .tab-button {
   margin: 0 0.2rem;
-  padding: 0.8rem;
   font-size: 1rem;
   font-weight: 600;
   background: none;
@@ -60,7 +71,7 @@ header {
     content: '';
     position: absolute;
     left: calc(50% - 2.5px);
-    bottom: 0px;
+    bottom: -0.8rem;
     background: #111;
     width: 5px;
     height: 5px;
@@ -72,6 +83,10 @@ header {
   &:hover {
     color: #111;
   }
+
+  &:hover .game-icon {
+    animation: bounce 300ms forwards;
+  }
 }
 
 .tab-button-active {
@@ -82,11 +97,15 @@ header {
   }
 }
 
+.game-icon {
+  width: 32px;
+  margin-bottom: 0.5rem;
+}
+
 .tab {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 100%;
   transform: translateY(20px);
   opacity: 0;
   transition: translate 200ms ease-in-out;
@@ -137,4 +156,34 @@ header {
 hr {
   margin: 2rem 0 4rem 0;
   border: 1px solid rgb(239, 239, 239);
+}
+
+@media only screen and (max-width: 750px) {
+  .tabs-container {
+    max-width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 670px) {
+  #tabs {
+    padding: 0 1rem;
+  }
+
+  .tabs-container {
+    margin: 8rem auto;
+  }
+
+  .tab-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 0;
+  }
+
+  .tab-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

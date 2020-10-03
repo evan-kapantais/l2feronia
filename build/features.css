@@ -51,6 +51,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -79,6 +80,14 @@ a {
   color: #edd28c;
   font-family: "Merienda", cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 @keyframes scroll-button {
@@ -134,6 +143,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -162,6 +172,14 @@ a {
   color: #edd28c;
   font-family: "Merienda", cursive;
   font-size: 2.5rem;
+}
+
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 .server-status {
@@ -283,10 +301,17 @@ a {
   color: #111;
 }
 
-header {
-  background: #111;
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-
 .navbar {
   display: grid;
   background: #111;
@@ -305,15 +330,17 @@ header {
 }
 
 .tabs-container {
-  margin: 12rem auto 0 auto;
+  margin: 12rem auto;
   border-radius: 5px;
   padding: 2rem;
   max-width: 800px;
+  background: rgba(255, 255, 255, 0.922);
 }
 .tabs-container h1 {
-  margin-bottom: 4rem;
+  margin: 4rem auto;
   text-align: center;
   font-size: 2.5rem;
+  width: fit-content;
 }
 
 .tab-buttons {
@@ -324,7 +351,6 @@ header {
 
 .tab-button {
   margin: 0 0.2rem;
-  padding: 0.8rem;
   font-size: 1rem;
   font-weight: 600;
   background: none;
@@ -339,7 +365,7 @@ header {
   content: "";
   position: absolute;
   left: calc(50% - 2.5px);
-  bottom: 0px;
+  bottom: -0.8rem;
   background: #111;
   width: 5px;
   height: 5px;
@@ -350,6 +376,9 @@ header {
 .tab-button:hover {
   color: #111;
 }
+.tab-button:hover .game-icon {
+  animation: bounce 300ms forwards;
+}
 
 .tab-button-active {
   color: #111;
@@ -358,11 +387,15 @@ header {
   opacity: 1;
 }
 
+.game-icon {
+  width: 32px;
+  margin-bottom: 0.5rem;
+}
+
 .tab {
   display: none;
   justify-content: center;
   align-items: center;
-  height: 100%;
   transform: translateY(20px);
   opacity: 0;
   transition: translate 200ms ease-in-out;
@@ -408,6 +441,34 @@ header {
 hr {
   margin: 2rem 0 4rem 0;
   border: 1px solid #efefef;
+}
+
+@media only screen and (max-width: 750px) {
+  .tabs-container {
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 670px) {
+  #tabs {
+    padding: 0 1rem;
+  }
+
+  .tabs-container {
+    margin: 8rem auto;
+  }
+
+  .tab-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 0;
+  }
+
+  .tab-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=features.css.map */
