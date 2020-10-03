@@ -226,7 +226,7 @@ code {
 
 #brand {
   font-family: "Merienda", cursive;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 5px;
 }
@@ -237,14 +237,16 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   color: #edd28c;
   font-weight: 600;
   z-index: 1;
   transition: all 1000ms ease-in-out;
 }
 .navbar .nav-link {
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
 .navbar .nav-link:after {
   content: "";
@@ -407,7 +409,6 @@ body > footer .footer-container {
   justify-content: center;
 }
 body > footer .footer-container .footer-block {
-  width: 20%;
   padding: 0 4rem;
 }
 body > footer .footer-container .footer-block h4 {

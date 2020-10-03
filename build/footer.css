@@ -51,6 +51,7 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   color: #111;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -81,6 +82,14 @@ a {
   font-size: 2.5rem;
 }
 
+code {
+  background: #ffeab5;
+  color: #333;
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
 body > footer {
   padding-top: 4rem;
   background: #111;
@@ -95,7 +104,6 @@ body > footer .footer-container {
   justify-content: center;
 }
 body > footer .footer-container .footer-block {
-  width: 20%;
   padding: 0 4rem;
 }
 body > footer .footer-container .footer-block h4 {
